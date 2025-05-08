@@ -70,7 +70,7 @@ fn main() -> anyhow::Result<()> {
             .map(|author| author.email().unwrap_or(&empty));
         print(emails)
     } else {
-        print(authors.into_iter())
+        print(&authors)
     }
 
     Ok(())
