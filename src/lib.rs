@@ -1,7 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
 use std::str::FromStr;
-use winnow::Result;
 use winnow::ascii::space0;
 use winnow::combinator::opt;
 use winnow::combinator::separated;
@@ -9,6 +8,7 @@ use winnow::error::ContextError;
 use winnow::prelude::*;
 use winnow::stream::Accumulate;
 use winnow::token::take_till;
+use winnow::Result;
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub struct Author {
