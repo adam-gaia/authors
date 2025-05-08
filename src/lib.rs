@@ -48,11 +48,7 @@ fn separator(s: &mut &str) -> Result<()> {
 }
 
 fn name(s: &mut &str) -> Result<String> {
-    let name = take_till(1.., |c| match c {
-        ']' | '<' | ',' | '"' => true,
-        _ => false,
-    })
-    .parse_next(s)?;
+    let name = take_till(1.., |c| matches!(c, ']' | '<' | ',' | '"')).parse_next(s)?;
     let name = name.trim().to_string();
     Ok(name)
 }
@@ -133,6 +129,10 @@ pub struct Authors {
 impl Authors {
     pub fn len(&self) -> usize {
         self.authors.len()
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.authors.is_empty()
     }
 }
 
