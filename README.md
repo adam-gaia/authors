@@ -13,24 +13,28 @@ Adam Gaia
 ## Usage
 - Without any flags, this utility is redundant
 ```console
-$ authors --emails "foo <foo@bar.com>, foo2 <foo2@bar.com>"
+$ authors "foo <foo@bar.com>, foo2 <foo2@bar.com>"
 foo <foo@bar.com>, foo2 <foo2@bar.com>
+
 ```
 
 - Print names only
 ```console
 $ authors --names "foo <foo@bar.com>, foo2 <foo2@bar.com>"
 foo, foo2
+
 ```
 
 - Print emails only
 ```console
 $ authors --emails "foo <foo@bar.com>, foo2 <foo2@bar.com>"
 foo@bar.com, foo2@bar.com
+
 ```
 
 - Piping to stdin instead of proving an input argument works too
 ```ignore
 $ echo "foo <foo@bar.com>, foo2 <foo2@bar.com>" | authors --names
 foo, foo2
+
 ```
