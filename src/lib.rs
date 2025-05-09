@@ -174,6 +174,7 @@ fn authors(s: &mut &str) -> winnow::Result<Authors> {
 }
 
 #[cfg(test)]
+#[allow(clippy::declare_interior_mutable_const)]
 mod tests {
     use super::*;
     use pretty_assertions::assert_eq;
