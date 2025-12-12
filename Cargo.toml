@@ -26,5 +26,5 @@ winnow = "0.7.10"
 [dev-dependencies]
 pretty_assertions = "1.4.1"
 trycmd = "0.15.9"
-rstest = "0.25.0"
+rstest = "0.26.0"
 s-string = "1.0.0"
