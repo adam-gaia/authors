@@ -14,7 +14,7 @@ name = "authors"
 path = "src/main.rs"
 
 [dependencies]
-annotate-snippets = "0.11.5"
+annotate-snippets = "0.12.0"
 anyhow = "1.0.98"
 clap = { version = "4.5.37", features = ["derive"] }
 env_logger = "0.11.8"
